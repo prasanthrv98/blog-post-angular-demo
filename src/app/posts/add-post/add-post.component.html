@@ -1,0 +1,28 @@
+<h1>Add Your Post</h1>
+<form class="form">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id="title" class="form-controller" #title />
+  </div>
+  <div class="form-group textarea">
+    <label for="content">Content</label>
+    <textarea
+      name="content"
+      id="content"
+      cols="30"
+      rows="25"
+      class="form-controller"
+      #content
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input type="text" id="author" class="form-controller" #author />
+  </div>
+
+  <div class="cta">
+    <button class="btn" (click)="onAddPost(title, content, author, $event)">
+      Add
+    </button>
+  </div>
+</form>
